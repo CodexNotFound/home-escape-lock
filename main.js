@@ -6,7 +6,6 @@
         let isValid = true;
         let allFilledIn = true;
         for (let inputIndex = 0; inputIndex < inputs.length; inputIndex++) {
-            console.log(inputs[inputIndex]);
             if (inputs[inputIndex].value === "") {
                 allFilledIn = false;
             }
