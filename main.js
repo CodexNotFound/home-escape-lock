@@ -24,6 +24,12 @@
                 for (let inputIndex = 0; inputIndex < inputs.length; inputIndex++) {
                     inputs[inputIndex].classList.remove(classToAdd);
                 }
+                if(isValid){
+                    const otp = document.querySelector("#otp");
+                    const img = document.querySelector("img.hide");
+                    otp.classList.add("hide")
+                    img.classList.remove("hide")
+                }
             },2000)
         } else {
             for (let inputIndex = 0; inputIndex < inputs.length; inputIndex++) {
@@ -35,6 +41,7 @@
 
     function OTPInput() {
         // Not the cleanest code but ¯\_(ツ)_/¯, it's just a one time use thing
+        // Does also not work on phones :/
         // https://stackoverflow.com/a/64272833
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('keydown', function (event) {
