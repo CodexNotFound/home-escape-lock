@@ -1,0 +1,78 @@
+@import url("./fonts.css");
+*{
+    margin: 0;
+    padding: 0;
+    font-family: JetBrains Mono, monospace;
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #9DC7C8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 7rem;
+}
+
+.input-wrapper > input {
+    width: 4rem;
+    height: 4rem;
+    padding: .5rem .25rem;
+    text-align: center;
+    border: none;
+    background: rgba(49, 65, 89, 0.15);
+    border-bottom: 2px solid #314159;
+    outline: none;
+    transition-property: border-bottom, padding-bottom, background-color;
+    transition-duration: .5s;
+}
+
+.input-wrapper > input:focus-within {
+    border-bottom: 5px solid #314159;
+    padding-bottom: .75rem;
+}
+
+.input-wrapper > input.valid {
+    background-color: rgba(105, 143, 63, 0.31);
+}
+
+.input-wrapper > input.invalid {
+    background-color: rgba(212, 77, 92, 0.31);
+    animation: tilt-shaking .8s
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(4deg); }
+    10% { transform: rotate(0deg); }
+    15% { transform: rotate(-4deg); }
+    20% { transform: rotate(0deg); }
+    25% { transform: rotate(4deg); }
+    30% { transform: rotate(0deg); }
+    35% { transform: rotate(-4deg); }
+    40% { transform: rotate(0deg); }
+    45% { transform: rotate(4deg); }
+    50% { transform: rotate(0deg); }
+    55% { transform: rotate(-4deg); }
+    60% { transform: rotate(0deg); }
+    65% { transform: rotate(4deg); }
+    70% { transform: rotate(0deg); }
+    75% { transform: rotate(-4deg); }
+    80% { transform: rotate(0deg); }
+    85% { transform: rotate(4deg); }
+    90% { transform: rotate(0deg); }
+    95% { transform: rotate(-4deg); }
+    100% { transform: rotate(0deg); }
+}
